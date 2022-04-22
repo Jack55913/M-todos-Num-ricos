@@ -15,9 +15,9 @@ x0=-0.5
 Salir=0
 i=0
 while (i<=NoIterMax) and (Salir==0):
-    print('x0:', x0, 'f(x0)')
     x1=x0-(f(x0)/df(x0))
-    if (((x0)==0) or (abs(x1-x0)<=Tolerancia)):
+    print('x0:', x0, 'f(x0)', f(x0), ' df(x0)', df(x0), 'x1: ', x1)
+    if (((x1)==0) or (abs(x1-x0)<=Tolerancia)):
         print("Solución en",i,"Iteraciones")
         print("xsol=",x1)
         Salir=1
@@ -25,4 +25,4 @@ while (i<=NoIterMax) and (Salir==0):
         i=i+1
         x0=x1
     if (i>=NoIterMax):
-        print("El método falló")
+        print("El método falló: cambie de método")
